@@ -1,6 +1,11 @@
-angular.module("umbraco").controller("EditorController", function($scope, $element) {
-	// All the calculations possible, maybe...
+angular.module("umbraco").controller("ColorSelectorController", function($scope, $element) {
+	$scope.colors = [
+		{ value: '314159', label: '314159' },
+		{ value: 'bada55', label: 'bada55' },
+		{ value: 'ff9090', label: 'ff9090' }
+	]
 	
-	// Set the property editor's value...
-	// $scope.model.value = 'Some computed value'
+	$scope.didSelectColor = function(color) {
+		$scope.model.value = color.value
+	}
 })

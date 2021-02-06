@@ -16,16 +16,17 @@
 
 	<xsl:variable name="packageName" select="'&packageName;'" />
 	<xsl:variable name="folderPrefix" select="/umbPackage/files/@folderPrefix" />
+	<xsl:variable name="version" select="'v&packageVersion;'" />
 
 	<!-- Identity transform -->
 	<xsl:template match="/">
-		<xsl:apply-templates select="* | text() | comment() | processing-instruction()" />
+		<xsl:apply-templates select="* | text() | processing-instruction()" />
 	</xsl:template>
 		
 	<xsl:template match="* | text()">
 		<xsl:copy>
 			<xsl:copy-of select="@*" />
-			<xsl:apply-templates select="* | text() | comment() | processing-instruction()" />
+			<xsl:apply-templates select="* | text() | processing-instruction()" />
 		</xsl:copy>
 	</xsl:template>
 	
@@ -43,7 +44,7 @@
 	<xsl:template match="file[@ref]">
 		<file>
 			<guid><xsl:value-of select="@ref" /></guid>
-			<orgPath><xsl:value-of select="concat($folderPrefix, translate($packageName, ' /', ''))" /></orgPath>
+			<orgPath><xsl:value-of select="concat($folderPrefix, translate($packageName, ' /', ''), $version)" /></orgPath>
 			<orgName><xsl:value-of select="@ref" /></orgName>
 		</file>
 	</xsl:template>

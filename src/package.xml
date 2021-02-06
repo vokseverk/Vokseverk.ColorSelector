@@ -8,11 +8,11 @@
 		
 		/App_Plugins/MyPropertyEditor/package.manifest
 	
-	Add a prefix if you like, e.g. folderPrefix="/App_Plugins/Company.":
+	Add a prefix if you like, e.g. folderPrefix="/App_Plugins/":
 	
-		/App_Plugins/Company.MyPropertyEditor/package.manifest
+		/App_Plugins/MyPropertyEditor/package.manifest
 	-->
-	<files folderPrefix="/App_Plugins/'">
+	<files folderPrefix="/App_Plugins/">
 		<file ref="package.manifest" />
 		<file ref="editor-styles.css" />
 		<file ref="editor-view.html" />
@@ -33,7 +33,7 @@
 		</package>
 		<author>
 			<name>&packageAuthor;</name>
-			<website>https://our.umbraco.com/</website>
+			<website>&packageWebsite;</website>
 		</author>
 		<readme><![CDATA[]]></readme>
 	</info>

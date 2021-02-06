@@ -1,3 +1,14 @@
-<div class="editor-wrapper-classname" ng-controller="EditorController">
-	<input ng-model="model.value" type="text" value="{{model.value}}" class="editor-classname" />
+<div class="color-selector-wrapper" ng-controller="ColorSelectorController">
+	<input ng-model="model.value" type="text" value="{{model.value}}" placeholder="#bada55" class="color-selector-field" />
+	
+	<div class="color-selector-defaults">
+		<umb-color-swatches
+			size="s"
+			colors="colors"
+			use-label="false"
+			selected-color="color"
+			use-color-class="false"
+			on-select="didSelectColor">
+		</umb-color-swatches>
+	</div>
 </div>

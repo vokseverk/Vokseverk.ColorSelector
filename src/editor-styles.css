@@ -1,7 +1,9 @@
-.editor-wrapper-classname {
-	
+.color-selector-wrapper {
+	display: flex;
 }
 
-.editor-wrapper-classname .editor-classname {
-	
+.color-selector-field {
+	width: 8ch;
+	margin-right: 10px;
 }
+

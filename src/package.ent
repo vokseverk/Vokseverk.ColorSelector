@@ -1,3 +1,4 @@
-<!ENTITY packageName "My Property Editor">
+<!ENTITY packageName "Vokseverk.ColorSelector">
 <!ENTITY packageVersion "0.5">
-<!ENTITY packageAuthor "Your Name">
+<!ENTITY packageAuthor "Vokseværk">
+<!ENTITY packageWebsite "https://vokseverk.dk">
