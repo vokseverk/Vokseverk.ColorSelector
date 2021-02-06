@@ -1,20 +1,7 @@
-# Umbraco Property Editor Template
+# Vokseverk Color Selector
 
-This is my starter project for an Umbraco Property Editor.
-
-## Process
-
-- After creating a new project from this template, rename the root folder from the
-default "package-template" to something that suits your project
-
-- Then find the `src/package.ent` file and change the constants in there
-
-- You may want to change a few things in the `package.xml` file as well
-
-- Edit/add/remove files in the `src/` folder and update the files section in the
-`package.xml` file
-
-- Edit this README to describe your new property editor :)
+A Property Editor for selecting a color - either by picking from a few defaults
+or by providing a specific CSS color value.
 
 
 ## Building
@@ -22,6 +9,3 @@ default "package-template" to something that suits your project
 Running the `build.sh` script builds a ZIP file in the `dist` folder which
 should be installable from Umbraco 8's _Settings > Packages_ section or
 Umbraco 7's _Developer > Packages_ section.
-
-
- 
