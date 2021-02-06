@@ -1,0 +1,47 @@
+<!DOCTYPE umbPackage [
+	<!ENTITY % packageInfo SYSTEM "package.ent">
+	%packageInfo;
+]>
+<umbPackage>
+	<!--
+	Files will be put in folderPrefix + packageName (without spaces or slashes), e.g.:
+		
+		/App_Plugins/MyPropertyEditor/package.manifest
+	
+	Add a prefix if you like, e.g. folderPrefix="/App_Plugins/Company.":
+	
+		/App_Plugins/Company.MyPropertyEditor/package.manifest
+	-->
+	<files folderPrefix="/App_Plugins/'">
+		<file ref="package.manifest" />
+		<file ref="editor-styles.css" />
+		<file ref="editor-view.html" />
+		<file ref="editor-controller.js" />
+	</files>
+	<info>
+		<package>
+			<name>&packageName;</name>
+			<version>&packageVersion;</version>
+			<iconUrl />
+			<license url="http://opensource.org/licenses/MIT">MIT License</license>
+			<url>https://our.umbraco.com/packages/</url>
+			<requirements type="strict">
+				<major>7</major>
+				<minor>0</minor>
+				<patch>0</patch>
+			</requirements>
+		</package>
+		<author>
+			<name>&packageAuthor;</name>
+			<website>https://our.umbraco.com/</website>
+		</author>
+		<readme><![CDATA[]]></readme>
+	</info>
+	<DocumentTypes />
+	<Templates />
+	<Stylesheets />
+	<Macros />
+	<DictionaryItems />
+	<Languages />
+	<DataTypes />
+</umbPackage>

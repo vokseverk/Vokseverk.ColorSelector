@@ -1,0 +1,15 @@
+{
+	propertyEditors: [		
+		{
+			alias: "NielsLyngsoe.ColorInput",
+			name: "Color Input",
+			valueType: "STRING",
+			editor: {
+				view: "~/App_Plugins/NielsLyngsoe.ColorInput/ColorInput.html"
+			}
+		}
+	],
+	css: [
+		"~/App_Plugins/NielsLyngsoe.ColorInput/ColorInput.controller.css"
+	]
+}
