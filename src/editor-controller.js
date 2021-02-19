@@ -26,6 +26,18 @@ angular.module("umbraco").controller("ColorSelectorController", function($scope,
 		}
 	}
 	
+	$scope.didTypeManualColor = function() {
+		var color = $scope.model.value
+		var newValue = validHexColor(color)
+		if (newValue != null) {
+			var newSetting = {
+				label: newValue,
+				value: newValue 
+			}
+			$scope.selectedPreset = newSetting
+		}
+	}
+	
 	function validHexColor(value) {
 		var hexRE = /^#?[a-fA-F0-9]{3,6}$/;
 		if (value && value.match(hexRE)) {

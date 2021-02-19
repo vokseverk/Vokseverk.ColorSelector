@@ -1,5 +1,5 @@
 <div class="color-selector-wrapper" ng-controller="ColorSelectorController">
-	<input name="color-selector-value" autocomplete="off" ng-model="model.value" type="text" value="{{model.value}}" class="color-selector-field" />
+	<input ng-change="didTypeManualColor()" name="color-selector-value" autocomplete="off" ng-model="model.value" type="text" value="{{model.value}}" class="color-selector-field" />
 	
 	<div class="color-selector-preview" hex-bg-color="{{model.value}}"></div>
 	
@@ -8,7 +8,7 @@
 			size="s"
 			colors="colors"
 			use-label="false"
-			selected-color="model.value"
+			selected-color="selectedPreset"
 			use-color-class="false"
 			on-select="didSelectColor(color, $index, $event)">
 		</umb-color-swatches>
