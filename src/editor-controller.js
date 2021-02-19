@@ -5,16 +5,25 @@ angular.module("umbraco").controller("ColorSelectorController", function($scope,
 	presets.map(function(p) {
 		var preset = validHexColor($scope.model.config[p])
 		if (preset != null) {
-			$scope.colors.push({
+			var colorValue = {
 				label: preset,
 				value: preset
-			})
+			}
+			$scope.colors.push(colorValue)
+			
+			if (preset == $scope.model.value) {
+				console.log("Found a match...")
+				$scope.selectedPreset = colorValue
+			}
 		}
 	})
 	
-	$scope.didSelectColor = function() {
-		var currentForm = angularHelper.getCurrentForm($scope)
-		currentForm.$setDirty()
+	$scope.didSelectColor = function(color, $index, $event) {
+		if (color != null) {
+			$scope.model.value = color.value
+			var currentForm = angularHelper.getCurrentForm($scope)
+			currentForm.$setDirty()
+		}
 	}
 	
 	function validHexColor(value) {
