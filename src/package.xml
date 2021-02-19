@@ -35,7 +35,7 @@
 			<name>&packageAuthor;</name>
 			<website>&packageWebsite;</website>
 		</author>
-		<readme><![CDATA[]]></readme>
+		<readme>&packageREADME;</readme>
 	</info>
 	<DocumentTypes />
 	<Templates />

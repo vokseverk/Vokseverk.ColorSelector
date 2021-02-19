@@ -1,4 +1,5 @@
 <!ENTITY packageName "Vokseverk.ColorSelector">
-<!ENTITY packageVersion "0.7.34">
+<!ENTITY packageVersion "1.0.0">
 <!ENTITY packageAuthor "Vokseværk">
 <!ENTITY packageWebsite "https://vokseverk.dk">
+<!ENTITY packageREADME "A Property Editor for selecting a color - either by picking from a few defaults or by providing a specific CSS color value.">
