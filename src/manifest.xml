@@ -3,6 +3,8 @@
 	<propertyEditor>
 		<name>Color Selector</name>
 		<alias>Vokseverk.ColorSelector</alias>
+		<icon>icon-colorpicker</icon>
+		<group>pickers</group>
 		<editor>
 			<valueType>STRING</valueType>
 			<view>editor-view.html</view>
