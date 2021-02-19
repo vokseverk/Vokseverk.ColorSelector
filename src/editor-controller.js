@@ -20,7 +20,9 @@ angular.module("umbraco").controller("ColorSelectorController", function($scope,
 	
 	$scope.didSelectColor = function(color, $index, $event) {
 		if (color != null) {
-			$scope.model.value = color.value
+			// v7 sends a string, v8 an object
+			var colorValue = typeof(color) == "string" ? color : color.value
+			$scope.model.value = colorValue
 			var currentForm = angularHelper.getCurrentForm($scope)
 			currentForm.$setDirty()
 		}
