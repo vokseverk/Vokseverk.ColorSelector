@@ -35,7 +35,8 @@ angular.module("umbraco").controller("ColorSelectorController", function($scope,
 				label: newValue,
 				value: newValue 
 			}
-			$scope.selectedPreset = newSetting
+			var v7 = typeof($scope.selectedPreset) == "string"
+			$scope.selectedPreset = v7 ? newSetting.value : newSetting
 		}
 	}
 	
