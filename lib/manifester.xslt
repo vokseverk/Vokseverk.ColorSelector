@@ -3,6 +3,11 @@
 	<!ENTITY % packageInfo SYSTEM "../src/package.ent">
 	%packageInfo;
 ]>
+<!--
+	This stylesheet transforms a `manifest.xml` file into the `package.manifest`.
+	Yes, this is XSLT building JSON so don't look if you're not into either :)
+	You're welcome to ask me anything about this though.
+-->
 <xsl:stylesheet
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

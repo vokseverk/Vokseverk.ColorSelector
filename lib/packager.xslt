@@ -3,6 +3,12 @@
 	<!ENTITY % packageInfo SYSTEM "../src/package.ent">
 	%packageInfo;
 ]>
+<!--
+	This transforms a template package.xml file into the one used in the package.
+	Primarily using this to make it easier to "version" the files, thus making it
+	a zillion times easier to make sure Umbraco is using the latest build when
+	trying to debug the package/property editor.
+-->
 <xsl:stylesheet
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
