@@ -12,7 +12,6 @@ angular.module("umbraco").controller("ColorSelectorController", function($scope,
 			$scope.colors.push(colorValue)
 			
 			if (preset == $scope.model.value) {
-				console.log("Found a match...")
 				$scope.selectedPreset = colorValue
 			}
 		}
