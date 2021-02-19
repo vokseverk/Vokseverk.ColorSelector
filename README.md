@@ -5,6 +5,15 @@ or by providing a specific CSS color value.
 
 Currently allows for 5 presets (per datatype).
 
+## Screenshots
+
+### Property editor
+
+![Property Screen](images/property-screen.jpg)
+
+### Configuration
+
+![Config Screen](images/config-screen.jpg)
 
 
 ## Building
