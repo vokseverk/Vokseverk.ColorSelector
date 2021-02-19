@@ -13,7 +13,7 @@
 		/App_Plugins/MyPropertyEditor/package.manifest
 	-->
 	<files folderPrefix="/App_Plugins/">
-		<file ref="package.manifest" />
+		<file ref="package.manifest" versioned="no" />
 		<file ref="editor-styles.css" />
 		<file ref="editor-view.html" />
 		<file ref="editor-controller.js" />
