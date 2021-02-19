@@ -1,14 +1,16 @@
 <div class="color-selector-wrapper" ng-controller="ColorSelectorController">
-	<input ng-model="model.value" type="text" value="{{model.value}}" placeholder="#bada55" class="color-selector-field" />
+	<input name="color-selector-value" autocomplete="off" ng-model="model.value" type="text" value="{{model.value}}" class="color-selector-field" />
+	
+	<div class="color-selector-preview" hex-bg-color="{{model.value}}"></div>
 	
 	<div class="color-selector-defaults">
 		<umb-color-swatches
 			size="s"
 			colors="colors"
 			use-label="false"
-			selected-color="color"
+			selected-color="model.value"
 			use-color-class="false"
-			on-select="didSelectColor">
+			on-select="didSelectColor()">
 		</umb-color-swatches>
 	</div>
 </div>
