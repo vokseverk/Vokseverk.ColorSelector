@@ -33,7 +33,7 @@
 	<xsl:template match="comment() | processing-instruction()">
 		<xsl:copy-of select="." />
 	</xsl:template>
-
+	
 	<!-- The `<files>` element has a `@folderPrefix` attribute we don't want to copy -->
 	<xsl:template match="files">
 		<files>
@@ -44,9 +44,16 @@
 	<xsl:template match="file[@ref]">
 		<file>
 			<guid><xsl:value-of select="@ref" /></guid>
-			<orgPath><xsl:value-of select="concat($folderPrefix, translate($packageName, ' /', ''), $version)" /></orgPath>
+			<orgPath>
+				<xsl:apply-templates select="@ref" mode="versioned" />
+			</orgPath>
 			<orgName><xsl:value-of select="@ref" /></orgName>
 		</file>
+	</xsl:template>
+	
+	<xsl:template match="@*" mode="versioned">
+		<xsl:value-of select="concat('/App_Plugins/', $packageName, '/')" />
+		<xsl:if test="not(../@versioned = 'no')"><xsl:value-of select="$version" /></xsl:if>
 	</xsl:template>
 
 </xsl:stylesheet>
