@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<propertyEditor>
+		<name>Color Selector</name>
+		<alias>Vokseverk.ColorSelector</alias>
+		<editor>
+			<valueType>STRING</valueType>
+			<view>editor-view.html</view>
+		</editor>
+		<prevalues>
+			<field>
+				<label>Preset 1</label>
+				<key>preset1</key>
+				<description>You can add 5 preset colors</description>
+				<view>textstring</view>
+			</field>
+			<field>
+				<label>Preset 2</label>
+				<key>preset2</key>
+				<description></description>
+				<view>textstring</view>
+			</field>
+			<field>
+				<label>Preset 3</label>
+				<key>preset3</key>
+				<description></description>
+				<view>textstring</view>
+			</field>
+			<field>
+				<label>Preset 4</label>
+				<key>preset4</key>
+				<description></description>
+				<view>textstring</view>
+			</field>
+			<field>
+				<label>Preset 5</label>
+				<key>preset5</key>
+				<description></description>
+				<view>textstring</view>
+			</field>
+		</prevalues>
+	</propertyEditor>
+
+	<javascript>editor-controller.js</javascript>
+	<css>editor-styles.css</css>
+</manifest>

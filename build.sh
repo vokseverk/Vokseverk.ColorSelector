@@ -10,11 +10,14 @@ fi
 
 # Copy files
 cp src/*.css dist/package/
+cp src/*.js dist/package/
 cp src/*.html dist/package/
-cp src/*.manifest dist/package/
 
 # Transform the package.xml file
 xsltproc --novalid --xinclude --output dist/package/package.xml lib/packager.xslt src/package.xml
+
+# Transform the manifest.xml file
+xsltproc --novalid --xinclude --output dist/package/package.manifest lib/manifester.xslt src/manifest.xml
 
 
 # Build the ZIP file
