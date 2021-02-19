@@ -1,0 +1,20 @@
+{
+	propertyEditors: [
+		{
+			alias: "Vokseverk.ColorSelector",
+			name: "Color Selector",
+			valueType: "STRING",
+			editor: {
+				view: "~/App_Plugins/Vokseverk.ColorSelector/editor-view.html"
+			}
+		}
+	],
+	
+	javascript: [
+		"~/App_Plugins/Vokseverk.ColorSelector/editor-controller.js"
+	],
+	
+	css: [
+		"~/App_Plugins/Vokseverk.ColorSelector/editor-styles.css"
+	]
+}
