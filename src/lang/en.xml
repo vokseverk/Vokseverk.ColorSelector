@@ -5,7 +5,7 @@
 		<link>https://vokseverk.dk/</link>
 	</creator>
 	<area alias="color">
-		<key alias="inputColor">Input a CSS colour</key>
+		<key alias="inputColor">Input a CSS hex colour</key>
 		<key alias="choosePreset">- or choose a preset:</key>
 	</area>
 </language>
