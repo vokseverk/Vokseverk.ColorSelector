@@ -33,7 +33,7 @@
 		</package>
 		<author>
 			<name>&packageAuthor;</name>
-			<website>&packageWebsite;</website>
+			<website>&packageAuthorURL;</website>
 		</author>
 		<readme>&packageREADME;</readme>
 	</info>
