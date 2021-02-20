@@ -19,5 +19,5 @@ Currently allows for 5 presets (per datatype).
 ## Building
 
 Running the `build.sh` script builds a ZIP file in the `dist` folder which
-should be installable from Umbraco 8's _Settings > Packages_ section or
+should be installable from Umbraco 8's _Packages_ section or
 Umbraco 7's _Developer > Packages_ section.
