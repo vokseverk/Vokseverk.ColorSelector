@@ -1,13 +1,13 @@
 <div class="color-selector-wrapper" ng-controller="ColorSelectorController">
 	
 	<div class="color-selector-choice">
-		<div class="color-selector-label">Input a CSS color</div>
+		<div class="color-selector-label"><localize key="color_inputColor">Input a CSS color</localize></div>
 		<input placeholder="ff8000" ng-change="didTypeManualColor()" name="color-selector-value" autocomplete="off" ng-model="model.value" type="text" value="{{model.value}}" class="color-selector-field" />
 		<div class="color-selector-preview" hex-bg-color="{{model.value}}"></div>
 	</div>
 	
 	<div class="color-selector-defaults color-selector-choice">
-		<div class="color-selector-label">- or choose a preset: </div>
+		<div class="color-selector-label"><localize key="color_choosePreset">- or choose a preset:</localize></div>
 		<umb-color-swatches
 			size="s"
 			colors="colors"
