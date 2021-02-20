@@ -3,28 +3,57 @@
 <head>
 	<meta charset="utf-8">
 	<title>Color Selector Test</title>
-	<link rel="stylesheet" href="editor-styles.css">
+	<link rel="stylesheet" href="../src/editor-styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<style>
-		.color-selector-wrapper::before {
-			content: "#";
-			color: #999;
+		.color-selector-preview {
+			background-color: #bada55;
+		}
+		
+		.color-selector-choice {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		
+		.color-selector-choice .label {
+			flex-basis: 100%;
+		}
+		
+		.umb-color-box {
+			width: 30px;
+			height: 30px;	
 		}
 	</style>
 </head>
 <body>
 
-<div class="color-selector-wrapper">
-	<input class="umb-editor umb-textstring color-selector-field" type="text" placeholder="#bada55" value="">
+
+<div class="color-selector-wrapper" ng-controller="ColorSelectorController">
 	
-	<div class="color-selector-defaults">
-		<button type="button" style="background:lime;"><span>lime</span></button>
-		<button class="selected" type="button" style="background:#314159;"><span>#314159</span></button>
-		<button type="button" style="background:tomato;"><span>tomato</span></button>
-		<button type="button" style="background:rgba(0, 0, 0, 0.25);"><span>rgba(0, 0, 0, 0.25)</span></button>
+	<div class="color-selector-input color-selector-choice">
+		<div class="label">Input a CSS color value</div>
+		<input ng-change="didTypeManualColor()" name="color-selector-value" autocomplete="off" ng-model="model.value" type="text" placeholder="ff8000" value="" class="color-selector-field" />
+		<div class="color-selector-preview" hex-bg-color="{{model.value}}"></div>
+	</div>
+		
+	
+	<div class="color-selector-defaults color-selector-choice">
+		<div class="label">- or choose one of these presets:</div>
+		<div class="umb-color-swatches" ng-class="{ 'with-labels': useLabel }" size="s" colors="colors" use-label="false" selected-color="selectedPreset" use-color-class="false" on-select="didSelectColor(color, $index, $event)">
+			<button type="button" class="umb-color-box umb-color-box--s btn-ff8000" ng-repeat="color in colors" title="#ff8000" hex-bg-inline="true" hex-bg-color="ff8000" ng-class="{ 'active': isSelectedColor(color) }" ng-click="setColor(color, $index, $event)" style="background-color: rgb(255, 128, 0);">
+				<div class="umb-color-box-inner">
+					<div class="check_circle"><i class="icon icon-check small ng-hide" ng-show="isSelectedColor(color)" aria-hidden="true"></i></div>
+				</div>
+			</button>
+			<button type="button" class="umb-color-box umb-color-box--s btn-314159" ng-repeat="color in colors" title="#314159" hex-bg-inline="true" hex-bg-color="314159" ng-class="{ 'active': isSelectedColor(color) }" ng-click="setColor(color, $index, $event)" style="background-color: rgb(49, 65, 89);"> <div class="umb-color-box-inner"> <div class="check_circle"> <i class="icon icon-check small ng-hide" ng-show="isSelectedColor(color)" aria-hidden="true"></i> </div> <!----> </div>
+			</button>
+			<button type="button" class="umb-color-box umb-color-box--s btn-f69" ng-repeat="color in colors" title="#f69" hex-bg-inline="true" hex-bg-color="f69" ng-class="{ 'active': isSelectedColor(color) }" ng-click="setColor(color, $index, $event)" style="background-color: rgb(255, 102, 153);"> <div class="umb-color-box-inner"> <div class="check_circle"> <i class="icon icon-check small" ng-show="isSelectedColor(color)" aria-hidden="false"></i> </div> <!----> </div>
+			</button>
+			<button type="button" class="umb-color-box umb-color-box--s btn-69f" ng-repeat="color in colors" title="#69f" hex-bg-inline="true" hex-bg-color="69f" ng-class="{ 'active': isSelectedColor(color) }" ng-click="setColor(color, $index, $event)" style="background-color: rgb(102, 153, 255);"> <div class="umb-color-box-inner"> <div class="check_circle"> <i class="icon icon-check small ng-hide" ng-show="isSelectedColor(color)" aria-hidden="true"></i> </div> <!----> </div>
+			</button>
+		</div>
 	</div>
 </div>
-
 
 </body>
 </html>
