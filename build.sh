@@ -12,6 +12,7 @@ fi
 cp src/*.css dist/package/
 cp src/*.js dist/package/
 cp src/*.html dist/package/
+cp src/lang/*.xml dist/package/
 
 # Transform the package.xml file
 xsltproc --novalid --xinclude --output dist/package/package.xml lib/packager.xslt src/package.xml
