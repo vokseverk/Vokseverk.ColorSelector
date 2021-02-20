@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="da" intName="Danish" localName="dansk" lcid="" culture="da-DK">
+	<creator>
+		<name>Vokseværk</name>
+		<link>https://vokseverk.dk/</link>
+	</creator>
+	<area alias="color">
+		<key alias="inputColor">Indtast en CSS farve</key>
+		<key alias="choosePreset">- eller vælg et preset:</key>
+	</area>
+</language>
