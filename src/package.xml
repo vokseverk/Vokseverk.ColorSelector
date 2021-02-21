@@ -24,7 +24,7 @@
 			<version>&packageVersion;</version>
 			<iconUrl />
 			<license url="http://opensource.org/licenses/MIT">MIT License</license>
-			<url>https://our.umbraco.com/packages/</url>
+			<url>&packageURL;</url>
 			<requirements type="strict">
 				<major>7</major>
 				<minor>0</minor>
@@ -33,7 +33,7 @@
 		</package>
 		<author>
 			<name>&packageAuthor;</name>
-			<website>&packageWebsite;</website>
+			<website>&packageAuthorURL;</website>
 		</author>
 		<readme>&packageREADME;</readme>
 	</info>
