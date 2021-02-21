@@ -3,7 +3,7 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .color-selector-field {
@@ -19,6 +19,18 @@
 	text-decoration: none;
 	margin: 5px 30px 5px 5px;
 	border-radius: 3px;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
+}
+
+.color-selector-choice {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.color-selector-label {
+	flex-basis: 100%;
 }

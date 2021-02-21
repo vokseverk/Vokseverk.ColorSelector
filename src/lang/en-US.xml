@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en_us" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+	<creator>
+		<name>Vokseværk</name>
+		<link>https://vokseverk.dk/</link>
+	</creator>
+	<area alias="color">
+		<key alias="inputColor">Input a CSS hex color</key>
+		<key alias="choosePreset">- or choose a preset:</key>
+	</area>
+</language>

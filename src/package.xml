@@ -17,6 +17,9 @@
 		<file ref="editor-styles.css" />
 		<file ref="editor-view.html" />
 		<file ref="editor-controller.js" />
+		<language ref="da-DK.xml" />
+		<language ref="en-US.xml" />
+		<language ref="en-GB.xml" />
 	</files>
 	<info>
 		<package>

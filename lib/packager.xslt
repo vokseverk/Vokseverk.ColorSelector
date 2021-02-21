@@ -56,6 +56,16 @@
 			<orgName><xsl:value-of select="@ref" /></orgName>
 		</file>
 	</xsl:template>
+
+	<xsl:template match="language[@ref]">
+		<file>
+			<guid><xsl:value-of select="@ref" /></guid>
+			<orgPath>
+				<xsl:value-of select="concat('/App_Plugins/', $packageName, '/lang')" />
+			</orgPath>
+			<orgName><xsl:value-of select="@ref" /></orgName>
+		</file>
+	</xsl:template>
 	
 	<xsl:template match="@*" mode="versioned">
 		<xsl:value-of select="concat('/App_Plugins/', $packageName, '/')" />
