@@ -5,6 +5,10 @@ or by providing a specific CSS color value.
 
 Currently allows for 5 presets (per datatype).
 
+Includes (from v1.1.0) Property Value Converters for use in Umbraco 7 & 8 -
+download them from the release page and put in `App_Code/`
+(or add to your Visual Studio solution).
+
 ## Screenshots
 
 ### Property editor
