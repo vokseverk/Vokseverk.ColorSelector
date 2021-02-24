@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Exclude the files in lib/ from determining the repo-language
+lib/* linguist-vendored
