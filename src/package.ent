@@ -2,5 +2,6 @@
 <!ENTITY packageVersion "1.1.0">
 <!ENTITY packageAuthor "Vokseværk">
 <!ENTITY packageAuthorURL "https://vokseverk.dk/">
+<!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.ColorSelector/main/images/colorselector-icon.png">
 <!ENTITY packageURL "https://our.umbraco.com/packages/backoffice-extensions/color-selector/">
 <!ENTITY packageREADME "A Property Editor for selecting a color - either by picking from a few defaults or by providing a specific CSS color value.">

@@ -25,7 +25,7 @@
 		<package>
 			<name>&packageName;</name>
 			<version>&packageVersion;</version>
-			<iconUrl />
+			<iconUrl>&packageIconURL;</iconUrl>
 			<license url="http://opensource.org/licenses/MIT">MIT License</license>
 			<url>&packageURL;</url>
 			<requirements type="strict">
