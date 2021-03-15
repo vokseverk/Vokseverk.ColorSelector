@@ -1,6 +1,6 @@
-<img align="right" src="images/colorselector-icon.png" width="120" height="120" alt="Three color swatches (white, blue and orange) on top of the Vokseværk 'fire-heart' logo" />
-
 # Color Selector for Umbraco
+
+<img align="right" src="images/vv-colorselector-icon.png" width="180" height="180" alt="Three color swatches (blue, green and orange) inside a square with the Vokseværk ‘fire-heart’ logo" />
 
 A Property Editor for selecting a color - either by picking from a few defaults
 or by providing a specific CSS color value.
