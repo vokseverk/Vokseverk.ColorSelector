@@ -1,0 +1,14 @@
+{
+	"AuthorDetails": {
+		"Name": "Vokseværk",
+		"ImageUrl": "https://github.com/vokseverk.png"
+	},
+	"Category": "Editor Tools",
+	"Screenshots": [
+		{
+			"ImageUrl": "https://raw.githubusercontent.com/vokseverk/REPONAME/main/images/SCREENSHOT_FILE.jpg",
+			"Caption": "Editor Screen with 4 sets of keys and values"
+		}
+	],
+	"Title": "Vokseværk _SOME_NAME_ Editor"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE Project [
+	<!ENTITY % packageInfo SYSTEM "package.ent">
+	%packageInfo;
+]>
+<?nuget-build packageAlias="&packageAlias;" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<PackageAliasContentFilesContentFilesPath>$(MSBuildThisFileDirectory)..\content\App_Plugins\&packageAlias;\**\*.*</PackageAliasContentFilesContentFilesPath>
+	</PropertyGroup>
+
+	<Target Name="Copy&packageNamespace;&packageSafeName;PackageAssets" BeforeTargets="Build">
+		<ItemGroup>
+			<PackageAliasContentFilesContentFiles Include="$(PackageAliasContentFilesContentFilesPath)" />
+		</ItemGroup>
+		<Message Text="Copying &packageSafeName; files: $(PackageAliasContentFilesContentFilesPath) - #@(PackageAliasContentFilesContentFiles->Count()) files"  Importance="high" />
+		<Copy
+			SourceFiles="@(PackageAliasContentFilesContentFiles)"
+			DestinationFiles="@(PackageAliasContentFilesContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\&packageAlias;\%(RecursiveDir)%(Filename)%(Extension)')"
+			SkipUnchangedFiles="true" />
+
+	</Target>
+
+	<Target Name="Clear&packageNamespace;&packageSafeName;PackageAssets" BeforeTargets="Clean">
+		<ItemGroup>
+			<PackageAliasContentFilesDir Include="$(MSBuildProjectDirectory)\App_Plugins\&packageAlias;\" />
+		</ItemGroup>
+		<Message Text="Clear old &packageSafeName; files"  Importance="high" />
+		<RemoveDir Directories="@(PackageAliasContentFilesDir)"  />
+	</Target>
+
+</Project>
