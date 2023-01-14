@@ -3,7 +3,6 @@
 	<!ENTITY % packageInfo SYSTEM "package.ent">
 	%packageInfo;
 ]>
-<?nuget-build packageAlias="&packageAlias;" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
 		<PackageAliasContentFilesContentFilesPath>$(MSBuildThisFileDirectory)..\content\App_Plugins\&packageAlias;\**\*.*</PackageAliasContentFilesContentFilesPath>
