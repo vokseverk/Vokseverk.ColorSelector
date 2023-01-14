@@ -1,7 +1,17 @@
-<!ENTITY packageName "Vokseverk.ColorSelector">
-<!ENTITY packageVersion "1.1.0">
+<!ENTITY packageVersion "1.1.1">
+<!ENTITY packageVersionV9 "2.0.0">
+<!ENTITY packageVersionV10 "3.0.1">
+<!ENTITY packageVersionV11 "4.0.0">
+<!ENTITY packageNamespace "Vokseverk">
+<!ENTITY packageSafeName "ColorSelector">
+<!ENTITY packageName "Vokseværk Color Selector">
+<!ENTITY packageAlias "Vokseverk.ColorSelector"><!-- Don't build this from entities! -->
 <!ENTITY packageAuthor "Vokseværk">
 <!ENTITY packageAuthorURL "https://vokseverk.dk/">
 <!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.ColorSelector/main/images/vv-colorselector-icon.png">
+<!ENTITY packageIconFile "vv-colorselector-icon.png">
 <!ENTITY packageURL "https://our.umbraco.com/packages/backoffice-extensions/color-selector/">
 <!ENTITY packageREADME "A Property Editor for selecting a color - either by picking from a few defaults or by providing a specific CSS color value.">
+<!ENTITY packageRepoURL "https://github.com/vokseverk/Vokseverk.ColorSelector">
+<!ENTITY packageTags "umbraco colorpicker colorselector property-editor umbraco-marketplace">
+<!ENTITY packageDESC "An Umbraco Property Editor for selecting a color - either by picking from a few defaults or by providing a specific CSS color value.">

@@ -19,7 +19,7 @@
 		omit-xml-declaration="yes"
 	/>
 
-	<xsl:variable name="packageName" select="'&packageName;'" />
+	<xsl:variable name="packageAlias" select="'&packageAlias;'" />
 	<xsl:variable name="version" select="'v&packageVersion;'" />
 
 	<xsl:variable name="quot">&quot;</xsl:variable>
@@ -72,7 +72,7 @@
 	<xsl:template match="view[contains(., '.')]" mode="json">
 		<xsl:value-of select="name()" />
 		<xsl:text>: &quot;</xsl:text>
-		<xsl:apply-templates select="." mode="versioned" />
+		<xsl:apply-templates select="." mode="unversioned" />
 		<xsl:text>&quot;</xsl:text>
 		<xsl:if test="not(position() = last())">, </xsl:if>
 	</xsl:template>
@@ -127,7 +127,7 @@
 
 	<xsl:template match="css | javascript" mode="quoted">
 		<xsl:text>&quot;</xsl:text>
-		<xsl:apply-templates select="." mode="versioned" />
+		<xsl:apply-templates select="." mode="unversioned" />
 		<xsl:text>&quot;</xsl:text>
 	</xsl:template>
 
@@ -135,11 +135,11 @@
 		<xsl:value-of select="concat($quot, ., $quot)" />
 	</xsl:template>
 
-	<xsl:template match="*" mode="versioned">
+	<xsl:template match="*" mode="unversioned">
 		<xsl:variable name="pluginpath" select="concat('~/App_Plugins/', $packageAlias, '/')" />
-		<xsl:variable name="parts" select="str:split(., '.')" />
+		<!-- <xsl:variable name="parts" select="str:split(., '.')" /> -->
 		<xsl:value-of select="concat($pluginpath, .)" />
-		<xsl:for-each select="$parts">
+		<!-- <xsl:for-each select="$parts">
 			<xsl:if test="not(position() = 1) and not(position() = last())">.</xsl:if>
 			<xsl:if test="not(position() = last())">
 				<xsl:value-of select="." />
@@ -147,7 +147,7 @@
 			<xsl:if test="position() = last()">
 				<xsl:value-of select="concat('-', $version, '.', .)" />
 			</xsl:if>
-		</xsl:for-each>
+		</xsl:for-each> -->
 	</xsl:template>
 
 </xsl:stylesheet>
