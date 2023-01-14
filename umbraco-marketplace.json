@@ -6,9 +6,9 @@
 	"Category": "Editor Tools",
 	"Screenshots": [
 		{
-			"ImageUrl": "https://raw.githubusercontent.com/vokseverk/REPONAME/main/images/SCREENSHOT_FILE.jpg",
-			"Caption": "Editor Screen with 4 sets of keys and values"
+			"ImageUrl": "https://raw.githubusercontent.com/vokseverk/Vokseverk.ColorSelector/main/images/property-screen.jpg",
+			"Caption": "Editor Screen with 4 color presets and a text input for a CSS color value"
 		}
 	],
-	"Title": "Vokseværk _SOME_NAME_ Editor"
+	"Title": "Vokseværk ColorSelector"
 }

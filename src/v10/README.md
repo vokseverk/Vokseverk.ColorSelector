@@ -1,7 +1,6 @@
-# Key/Value Editor for Umbraco
+# Color Selector for Umbraco
 
-This property editor is *heavily* based on the **Multiple Textstrings** built-in
-property editor, so should look and behave very similar to that one, even though
-it has twice as many textboxes. (So hitting `Enter`/`Return` adds another set,
-and you can sort them by using the handles on the right.)
+A Property Editor for selecting a color - either by picking from a few defaults
+or by providing a specific CSS color value.
 
+Currently allows for up to 5 presets (per datatype).

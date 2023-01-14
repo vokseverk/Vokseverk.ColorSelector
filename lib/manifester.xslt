@@ -11,15 +11,17 @@
 <xsl:stylesheet
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:str="http://exslt.org/strings"
+	exclude-result-prefixes="str"
 >
 	<xsl:output method="text"
 		indent="yes"
 		omit-xml-declaration="yes"
 	/>
-	
+
 	<xsl:variable name="packageName" select="'&packageName;'" />
 	<xsl:variable name="version" select="'v&packageVersion;'" />
-	
+
 	<xsl:variable name="quot">&quot;</xsl:variable>
 	<xsl:variable name="objStart">{</xsl:variable>
 	<xsl:variable name="objEnd">}</xsl:variable>
@@ -31,14 +33,14 @@
 			<xsl:text>propertyEditors: [</xsl:text>
 				<xsl:apply-templates select="propertyEditor" />
 			<xsl:text>],</xsl:text>
-			
+
 			<xsl:text>css: [</xsl:text>
 				<xsl:for-each select="css">
 					<xsl:apply-templates select="." mode="quoted" />
 					<xsl:if test="not(position() = last())">, </xsl:if>
 				</xsl:for-each>
 			<xsl:text>],</xsl:text>
-			
+
 			<xsl:text>javascript: [</xsl:text>
 				<xsl:for-each select="javascript">
 					<xsl:apply-templates select="." mode="quoted" />
@@ -54,7 +56,7 @@
 		<xsl:text>}</xsl:text>
 		<xsl:if test="not(position() = last())">, </xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template match="prevalues" mode="json">
 		<xsl:value-of select="name()" />
 		<xsl:text>: {</xsl:text>
@@ -88,26 +90,33 @@
 		<xsl:apply-templates select="text()" mode="quoted" />
 		<xsl:if test="not(position() = last())">, </xsl:if>
 	</xsl:template>
-	
+
+	<xsl:template match="*[. = 'true'] | *[. = 'false']" mode="json">
+		<xsl:value-of select="name()" />
+		<xsl:text>: </xsl:text>
+		<xsl:value-of select="." />
+		<xsl:if test="not(position() = last())">, </xsl:if>
+	</xsl:template>
+
 	<xsl:template match="*[not(text()) and not(*)]" mode="json">
 		<xsl:value-of select="name()" />
 		<xsl:text>: ""</xsl:text>
 		<xsl:if test="not(position() = last())">, </xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template match="@*" mode="json" priority="-1">
 		<xsl:value-of select="name()" />
 		<xsl:text>: </xsl:text>
 		<xsl:apply-templates select="text()" mode="quoted" />
 	</xsl:template>
-	
+
 	<xsl:template match="*[@type = 'int']" mode="json" priority="-1">
 		<xsl:value-of select="name()" />
 		<xsl:text>: </xsl:text>
 		<xsl:value-of select="." />
 		<xsl:if test="not(position() = last())">, </xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template match="*[*]" mode="json" priority="-1">
 		<xsl:value-of select="name()" />
 		<xsl:text>: {</xsl:text>
@@ -125,10 +134,20 @@
 	<xsl:template match="text()" mode="quoted">
 		<xsl:value-of select="concat($quot, ., $quot)" />
 	</xsl:template>
-	
+
 	<xsl:template match="*" mode="versioned">
-		<xsl:variable name="pluginpath" select="concat('~/App_Plugins/', $packageName, '/')" />
-		<xsl:value-of select="concat($pluginpath, $version, '/', .)" />
+		<xsl:variable name="pluginpath" select="concat('~/App_Plugins/', $packageAlias, '/')" />
+		<xsl:variable name="parts" select="str:split(., '.')" />
+		<xsl:value-of select="concat($pluginpath, .)" />
+		<xsl:for-each select="$parts">
+			<xsl:if test="not(position() = 1) and not(position() = last())">.</xsl:if>
+			<xsl:if test="not(position() = last())">
+				<xsl:value-of select="." />
+			</xsl:if>
+			<xsl:if test="position() = last()">
+				<xsl:value-of select="concat('-', $version, '.', .)" />
+			</xsl:if>
+		</xsl:for-each>
 	</xsl:template>
-	
+
 </xsl:stylesheet>
