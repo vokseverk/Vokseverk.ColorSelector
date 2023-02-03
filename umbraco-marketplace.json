@@ -1,7 +1,9 @@
 {
 	"AuthorDetails": {
-		"Name": "Vokseværk",
-		"ImageUrl": "https://github.com/vokseverk.png"
+		"Name": "Chriztian Steinmeier",
+		"ImageUrl": "https://github.com/greystate.png",
+		"Description": "Frontend & Umbraco Developer @ Vokseværk in Denmark. 6× Umbraco MVP.",
+		"Url": "https://greystate.dk/who/"
 	},
 	"Category": "Editor Tools",
 	"Screenshots": [
@@ -10,5 +12,5 @@
 			"Caption": "Editor Screen with 4 color presets and a text input for a CSS color value"
 		}
 	],
-	"Title": "Vokseværk ColorSelector"
+	"Title": "ColorSelector"
 }
