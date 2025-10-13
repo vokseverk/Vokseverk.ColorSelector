@@ -34,7 +34,6 @@ class ColorSelector extends LitElement {
 	}
 
 	set config(data) {
-		console.log('Hey I changed!')
 		const p1 = data.getValueByAlias('preset1') || ''
 		const p2 = data.getValueByAlias('preset2') || ''
 		const p3 = data.getValueByAlias('preset3') || ''
@@ -42,25 +41,36 @@ class ColorSelector extends LitElement {
 		const p5 = data.getValueByAlias('preset5') || ''
 
 		this.presets = [p1, p2, p3, p4, p5]
+		this.hideManualInput = data.getValueByAlias('hideManualInput') === true
 	}
 
 	render() {
 		return html`
-		<div>
-			<uui-label for="customcolor"><umb-localize key="color_inputColor">Input a CSS color</umb-localize></uui-label>
-			<uui-input id="customcolor" .value=${this.value} @input=${this.onInput}>
-				<div slot="append" class="preview"><uui-color-swatch .value=${this.value}></uui-color-swatch></div>
-			</uui-input>
-		</div>
-		<div>
-			<uui-label for="colorpreset"><umb-localize key="color_choosePreset">– or choose a preset</umb-localize></uui-label>
-			<uui-color-swatches id="colorpreset" .value=${this.value || '#fff'} @change=${this.changed}>
-				${this.presets.map(preset => {
-					return html`<uui-color-swatch .value=${preset}></uui-color-swatch>`
-				})}
-			</uui-color-swatches>
-		</div>
+			${this.hideManualInput ? '' :
+				html`<div>
+					<uui-label for="customcolor"><umb-localize key="color_inputColor">Input some CSS color</umb-localize></uui-label>
+					<uui-input id="customcolor" .value=${this.value} @input=${this.onInput}>
+						<div slot="append" class="preview"><uui-color-swatch .value=${this.value}></uui-color-swatch></div>
+					</uui-input>
+				</div>`
+			}
+			<div>
+				<uui-label for="colorpreset"><umb-localize key="${this.labelKey()}">Presets</umb-localize></uui-label>
+				<uui-color-swatches id="colorpreset" .value=${this.value || '#fff'} @change=${this.changed}>
+					${this.presets.map(preset => {
+						return html`<uui-color-swatch .value=${preset}></uui-color-swatch>`
+					})}
+				</uui-color-swatches>
+			</div>
 		`
+	}
+
+	labelKey () {
+		if (this.hideManualInput) {
+			return "color_choosePreset"
+		} else {
+			return "color_orChoosePreset"
+		}
 	}
 
 	get value() {
@@ -70,7 +80,6 @@ class ColorSelector extends LitElement {
 	set value(newValue) {
 		if (newValue != null && newValue != '') {
 			this.#internalValue = newValue
-			console.log("Sending change event")
 			this.dispatchEvent(new CustomEvent('change'))
 		}
 	}

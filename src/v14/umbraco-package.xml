@@ -63,14 +63,15 @@
 
 	<extension>
 		<type>localization</type>
-		<alias>Vokseverk.ColorSelector.Localize.EnUs</alias>
+		<alias>Vokseverk.ColorSelector.Localize.En</alias>
 		<name>English</name>
 		<meta>
 			<culture>en</culture>
 			<localizations>
 				<color>
 					<inputColor>Input a CSS color</inputColor>
-					<choosePreset>— or choose a preset:</choosePreset>
+					<orChoosePreset>— or choose a preset:</orChoosePreset>
+					<choosePreset>Choose a preset:</choosePreset>
 				</color>
 			</localizations>
 		</meta>
@@ -78,14 +79,15 @@
 
 	<extension>
 		<type>localization</type>
-		<alias>Vokseverk.ColorSelector.Localize.DaDk</alias>
+		<alias>Vokseverk.ColorSelector.Localize.Da</alias>
 		<name>Danish</name>
 		<meta>
-			<culture>da-DK</culture>
+			<culture>da</culture>
 			<localizations>
 				<color>
 					<inputColor>Indtast en CSS farve</inputColor>
-					<choosePreset>— eller vælg et preset:</choosePreset>
+					<orChoosePreset>— eller vælg et preset:</orChoosePreset>
+					<choosePreset>Vælg en farve:</choosePreset>
 				</color>
 			</localizations>
 		</meta>
