@@ -8,6 +8,10 @@
 	Primarily using this to make it easier to "version" the files, thus making it
 	a zillion times easier to make sure Umbraco is using the latest build when
 	trying to debug the package/property editor.
+
+	Also used to transform the csproj.xml and targets.xml files into the {PROJECTNAME}.csproj
+	and {PROJECTNAME}.targets files, respectively for the Nuget package
+	(by way of the "Identity transform" templates).
 -->
 <xsl:stylesheet
 	version="1.0"
@@ -28,18 +32,18 @@
 	<xsl:template match="/">
 		<xsl:apply-templates select="* | text() | processing-instruction()" />
 	</xsl:template>
-		
+
 	<xsl:template match="* | text()">
 		<xsl:copy>
 			<xsl:copy-of select="@*" />
 			<xsl:apply-templates select="* | text() | processing-instruction()" />
 		</xsl:copy>
 	</xsl:template>
-	
+
 	<xsl:template match="comment() | processing-instruction()">
 		<xsl:copy-of select="." />
 	</xsl:template>
-	
+
 	<!-- The `<files>` element has a `@folderPrefix` attribute we don't want to copy -->
 	<xsl:template match="files">
 		<files>
@@ -66,7 +70,7 @@
 			<orgName><xsl:value-of select="@ref" /></orgName>
 		</file>
 	</xsl:template>
-	
+
 	<xsl:template match="@*" mode="versioned">
 		<xsl:value-of select="concat('/App_Plugins/', $packageName, '/')" />
 		<xsl:if test="not(../@versioned = 'no')"><xsl:value-of select="$version" /></xsl:if>
