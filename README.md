@@ -11,13 +11,14 @@ Currently allows for 5 presets (per datatype).
 
 - Version 1.x (Umbraco package) works in Umbraco 7 and Umbraco 8
 - Version 3.x (Nuget package) works in Umbraco 10 (with .net6) and Umbraco 11 (.net7)
+- Version 6.x (Nuget package) works in Umbraco 16 (with .net9)
 
-There is no package for Umbraco 9, as I am not able to test that configuration.
+It might work in other versions but I haven't been able to test.
 
 Note that you'll need to manually download the appropriate _PropertyValueConverter_
 for version 1.x, depending on which Umbraco version you have.
 
-The Nuget package installs the PropertyValueConverter automatically.
+The Nuget packages installs the PropertyValueConverter automatically.
 
 ## Screenshots
 
@@ -29,11 +30,3 @@ The Nuget package installs the PropertyValueConverter automatically.
 
 ![Config Screen](images/config-screen.jpg)
 
-
-## Building
-
-Running the `build.sh` script (on macOS) builds a ZIP file in the `dist` folder which
-should be installable from Umbraco 8's _Packages_ section or
-Umbraco 7's _Developer > Packages_ section.
-
-The `nuget-build.sh` script is what I use to build the Nuget package.
