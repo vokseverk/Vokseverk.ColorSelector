@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE manifest [
+	<!ENTITY % packageInfo SYSTEM "../package.ent">
+	%packageInfo;
+]>
+<manifest schema="../../umbraco-package-schema.json">
+	<name>&packageName;</name>
+	<version>&packageVersionV14;</version>
+
+	<extension>
+		<type>propertyEditorUi</type>
+		<alias>Vokseverk.ColorSelector</alias>
+		<name>Color Selector</name>
+		<element>/App_Plugins/Vokseverk.ColorSelector/color-selector.js</element>
+		<elementName>color-selector</elementName>
+		<meta>
+			<label>Color Selector</label>
+			<propertyEditorSchemaAlias>Umbraco.Plain.String</propertyEditorSchemaAlias>
+			<group>pickers</group>
+			<icon>icon-colorpicker</icon>
+			<settings>
+				<properties>
+					<property>
+						<label>Preset 1</label>
+						<alias>preset1</alias>
+						<description>You can add 5 preset colors</description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+					<property>
+						<label>Preset 2</label>
+						<alias>preset2</alias>
+						<description></description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+					<property>
+						<label>Preset 3</label>
+						<alias>preset3</alias>
+						<description></description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+					<property>
+						<label>Preset 4</label>
+						<alias>preset4</alias>
+						<description></description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+					<property>
+						<label>Preset 5</label>
+						<alias>preset5</alias>
+						<description></description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.TextBox</propertyEditorUiAlias>
+					</property>
+					<property>
+						<label>Hide manual input</label>
+						<alias>hideManualInput</alias>
+						<description>Check this to hide the manual input option</description>
+						<propertyEditorUiAlias>Umb.PropertyEditorUi.Toggle</propertyEditorUiAlias>
+					</property>
+				</properties>
+			</settings>
+		</meta>
+	</extension>
+
+	<extension>
+		<type>localization</type>
+		<alias>Vokseverk.ColorSelector.Localize.EnUs</alias>
+		<name>English</name>
+		<meta>
+			<culture>en</culture>
+			<localizations>
+				<color>
+					<inputColor>Input a CSS color</inputColor>
+					<choosePreset>— or choose a preset:</choosePreset>
+				</color>
+			</localizations>
+		</meta>
+	</extension>
+
+	<extension>
+		<type>localization</type>
+		<alias>Vokseverk.ColorSelector.Localize.DaDk</alias>
+		<name>Danish</name>
+		<meta>
+			<culture>da-DK</culture>
+			<localizations>
+				<color>
+					<inputColor>Indtast en CSS farve</inputColor>
+					<choosePreset>— eller vælg et preset:</choosePreset>
+				</color>
+			</localizations>
+		</meta>
+	</extension>
+
+</manifest>
