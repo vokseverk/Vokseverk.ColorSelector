@@ -24,10 +24,9 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
-	<!-- <ItemGroup>
+	<ItemGroup>
 		<PackageReference Include="Umbraco.Cms.Core" Version="16.0.0" />
-		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="16.0.0" />
-	</ItemGroup> -->
+	</ItemGroup>
 
 	<ItemGroup>
 		<Content Include="App_Plugins\&packageAlias;\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
