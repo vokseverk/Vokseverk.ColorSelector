@@ -55,7 +55,9 @@ class ColorSelector extends LitElement {
 				</div>`
 			}
 			<div>
-				<uui-label for="colorpreset"><umb-localize key="${this.labelKey()}">Presets</umb-localize></uui-label>
+				${this.hideManualInput ? '' :
+					html`<uui-label for="colorpreset"><umb-localize key="${this.labelKey()}">Presets</umb-localize></uui-label>`
+				}
 				<uui-color-swatches id="colorpreset" .value=${this.value || '#fff'} @change=${this.changed}>
 					${this.presets.map(preset => {
 						return html`<uui-color-swatch .value=${preset}></uui-color-swatch>`
