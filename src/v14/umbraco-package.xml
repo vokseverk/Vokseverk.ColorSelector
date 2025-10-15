@@ -66,10 +66,26 @@
 		<alias>Vokseverk.ColorSelector.Localize.En</alias>
 		<name>English</name>
 		<meta>
-			<culture>en</culture>
+			<culture>en-us</culture>
 			<localizations>
 				<color>
 					<inputColor>Input a CSS color</inputColor>
+					<orChoosePreset>— or choose a preset:</orChoosePreset>
+					<choosePreset>Choose a preset:</choosePreset>
+				</color>
+			</localizations>
+		</meta>
+	</extension>
+
+	<extension>
+		<type>localization</type>
+		<alias>Vokseverk.ColorSelector.Localize.EnUk</alias>
+		<name>English (UK)</name>
+		<meta>
+			<culture>en</culture>
+			<localizations>
+				<color>
+					<inputColor>Input a CSS colour</inputColor>
 					<orChoosePreset>— or choose a preset:</orChoosePreset>
 					<choosePreset>Choose a preset:</choosePreset>
 				</color>
