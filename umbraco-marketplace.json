@@ -6,7 +6,7 @@
 		"Url": "https://greystate.dk/who/"
 	},
 	"Category": "Editor Tools",
-	"LicenseTypes": "Free",
+	"LicenseTypes": [ "Free" ],
 	"Screenshots": [
 		{
 			"ImageUrl": "https://raw.githubusercontent.com/vokseverk/Vokseverk.ColorSelector/main/images/property-screen.jpg",
