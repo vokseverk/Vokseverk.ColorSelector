@@ -1,0 +1,12 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "path" : "nuget-build-v14.sh"
+    }
+  },
+  "environment" : {
+    "UMB_VERSION" : "v14"
+  },
+  "openLogOnRun" : "start"
+}

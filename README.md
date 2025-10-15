@@ -10,14 +10,25 @@ Currently allows for 5 presets (per datatype).
 ## Versions
 
 - Version 1.x (Umbraco package) works in Umbraco 7 and Umbraco 8
-- Version 3.x (Nuget package) works in Umbraco 10 (with .net6) and Umbraco 11 (.net7)
+- Version 3.x (Nuget package) works in Umbraco 10, Umbraco 11 and Umbraco 13
+- Version 6.x (Nuget package) works in Umbraco 16
 
-There is no package for Umbraco 9, as I am not able to test that configuration.
+It might work in other versions but I haven't been able to test as I don't really understand .net targeting/versioning
 
 Note that you'll need to manually download the appropriate _PropertyValueConverter_
 for version 1.x, depending on which Umbraco version you have.
 
-The Nuget package installs the PropertyValueConverter automatically.
+The Nuget package for v3.x installs a PropertyValueConverter automatically.
+
+> [!NOTE]
+> The v6.x version currently doesn't install a PropertyValueConverter as it's not really needed.
+
+## Changes
+
+From version 6 a toggle is included to disable the manual input, although it makes it work
+somewhat identically to the built-in **Color Picker** property editor. It's just easier to turn it off
+than to switch to a whole new editor if/when the need arises.
+
 
 ## Screenshots
 
@@ -29,11 +40,3 @@ The Nuget package installs the PropertyValueConverter automatically.
 
 ![Config Screen](images/config-screen.jpg)
 
-
-## Building
-
-Running the `build.sh` script (on macOS) builds a ZIP file in the `dist` folder which
-should be installable from Umbraco 8's _Packages_ section or
-Umbraco 7's _Developer > Packages_ section.
-
-The `nuget-build.sh` script is what I use to build the Nuget package.
