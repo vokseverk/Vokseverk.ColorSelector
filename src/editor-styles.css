@@ -3,7 +3,7 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: flex-end;
 }
 
 .color-selector-field {
@@ -33,4 +33,8 @@
 
 .color-selector-label {
 	flex-basis: 100%;
+}
+
+.color-selector-wrapper .umb-color-swatches button:first-child {
+	margin-left: 0;
 }

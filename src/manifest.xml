@@ -11,6 +11,12 @@
 		</editor>
 		<prevalues>
 			<field>
+				<label>Disable custom color</label>
+				<key>disableCustomColor</key>
+				<description>Disable the ability to enter a custom hex color</description>
+				<view>boolean</view>
+			</field>
+			<field>
 				<label>Preset 1</label>
 				<key>preset1</key>
 				<description>You can add 5 preset colors</description>

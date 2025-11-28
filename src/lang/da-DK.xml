@@ -7,5 +7,6 @@
 	<area alias="color">
 		<key alias="inputColor">Indtast en CSS hex farve</key>
 		<key alias="choosePreset">- eller vælg et preset:</key>
+		<key alias="choosePresetAlt">Vælg et preset:</key>
 	</area>
 </language>

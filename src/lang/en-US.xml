@@ -7,5 +7,6 @@
 	<area alias="color">
 		<key alias="inputColor">Input a CSS hex color</key>
 		<key alias="choosePreset">- or choose a preset:</key>
+		<key alias="choosePresetAlt">Choose a preset:</key>
 	</area>
 </language>
